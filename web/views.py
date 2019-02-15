@@ -34,7 +34,7 @@ def test(request):
         # return HttpResponse('post')
         return HttpResponse('注册成功!')
     elif request.method =='GET':
-        # return HttpResponse('get')
+        # return HttpResponse('ge11t')
         user_list =models.Userinfo.objects.all()
         return render(request,'ceshi.html',{"data":user_list})
 
