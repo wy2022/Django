@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<form action="/web/" method="post">
+			<input type="text" name="username" value="123" />username</br>
+			<input type="password" name="password" value="456"/>password</br>
+			<input type="submit" value="提交"/>
+		</form>
+{#    <img src="/static/img/mayun.jpg">#}
+    		<table border="1" cellspacing="" cellpadding="">
+			<tr>
+				<th>用户名</th>
+				<td>密码</td>
+			</tr>
+                {% for line in data %}
+			<tr>
+				<td>{{ line.user}}</td>
+                <td>{{line.pwd}}</td>
+			</tr>
+                {% endfor %}
+		</table>
+	</body>
+</html>
