@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<form action="/app/user/" method="post">
+			<input type="text" name="user" value="admin" />username</br>
+			<input type="password" name="pwd" value="123456"/>password</br>
+						<input type="tel" name="tel" value="13513246578"/>tel</br>
+									<input type="email" name="email" value="123456@qq.com"/>email</br></br></br>
+
+			<input type="submit" value="提交"/>
+		</form></br></br></br>
+		<table border="4" cellspacing="2" cellpadding="10">
+			<tr>
+				<th>用户名</th>
+				<td>密码</td>
+				<td>tel</td>
+				<td>email</td>
+                <td>操&nbsp&nbsp作</td>
+			</tr>
+            {% for user in user_list %}
+
+
+
+			<tr>
+				<td>{{ user.account }}</td>
+            <td>{{ user.password }}</td>
+            <td>{{ user.tel }}</td>
+            <td>{{ user.email }}</td>
+
+                <td><a href="{% url 'dele' user.id %}">修改</a></td>
+
+            <td>删除</td>
+			</tr>
+            {% endfor %}
+		</table>
+	</body>
+</html>

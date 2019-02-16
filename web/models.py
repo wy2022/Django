@@ -32,7 +32,7 @@ from django.db import models
 
 class Usergroup(models.Model):
     uid=models.AutoField(primary_key=True)
-    caption=models.CharField(max_length=64,null=True)
+    caption=models.CharField(max_length=62,null=True)
     ctime=models.DateField(auto_now_add=True,null=True)
     uptime=models.DateField(auto_now=True,null=True)
 class Userinfo(models.Model):

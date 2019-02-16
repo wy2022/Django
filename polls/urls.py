@@ -8,6 +8,7 @@ urlpatterns = [
     #127.0.0.1/polls/1
     path('<int:id>/', views.test,name='test'),
     #127.0.0.1/polls/1/hello
-    path('<int:id>/hello/',views.hello,name='hello')
+    # path('<int:id>/hello/',views.hello,name='hello')
+    path('hello/<int:id>/', views.hello, name='hello')
 
 ]
