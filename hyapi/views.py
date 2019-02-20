@@ -61,7 +61,7 @@ def index(request,account,password,hycard):
         #     }
         #     return json.dumps(login_res)
         # print(card)
-        #获取会员详情
+        #获取会员详情.
         result = s.get(url, params=parm, headers=header, verify=False)
         print('=================')
         if result.status_code == 200:
