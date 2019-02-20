@@ -33,8 +33,8 @@ from django.db import models
 class Usergroup(models.Model):
     uid=models.AutoField(primary_key=True)
     caption=models.CharField(max_length=62,null=True)
-    ctime=models.DateField(auto_now_add=True,null=True)
-    uptime=models.DateField(auto_now=True,null=True)
+    ctime=models.DateTimeField(auto_now_add=True,null=True)
+    uptime=models.DateTimeField(auto_now=True,null=True)
 class Userinfo(models.Model):
     username=models.CharField(max_length=32,blank=True)
     password=models.FileField(max_length=60,help_text='pwd')

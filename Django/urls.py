@@ -20,6 +20,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('polls/',include('polls.urls')),
     path('web/',include('web.urls')),
-    path('app/',include('app.urls'))
+    path('app/',include('app.urls')),
+    path('hyapi/',include('hyapi.urls')),
 
 ]

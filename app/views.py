@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render,get_object_or_404
+
 
 from django.http import HttpResponse
 from app import models as appModel
@@ -6,7 +7,12 @@ from app import models as appModel
 # Create your views here.
 
 def index(request):
-    return  HttpResponse('app test')
+
+    user_list = appModel.user.objects.order_by('id')[2:]
+
+
+    # return  HttpResponse(user_list)
+    return render(request,"app/test1.html",{'user_list':user_list})
 
 def user(request):
     if request.method == 'GET':
@@ -28,5 +34,5 @@ def dele(request,id):
         return HttpResponse(id)
 
 
-def weblog(request,username):
-    return HttpResponse(username)
+def weblog(request,account,password):
+    return HttpResponse(account)
